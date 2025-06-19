@@ -54,4 +54,9 @@ public class ToDoController {
     public String getMergify() {
         return "Mergify";
     }
+
+    @GetMapping("/auto_mergify")
+    public String getAutoMergify() {
+        return "Auto Mergify";
+    }
 }
