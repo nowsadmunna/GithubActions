@@ -36,27 +36,5 @@ public class ToDoController {
     public void deleteTodo(@PathVariable String id) {
         todoService.delete(id);
     }
-
-    @GetMapping("/some")
-    public String getSomeTodo() {
-        return "Hello World";
-    }
-    @GetMapping("/pr_branch")
-    public String getPrBranch() {
-        return "Pr Branch";
-    }
-    @GetMapping("/auto_merge")
-    public String getAutoMerge() {
-        return "Auto Merge";
-    }
-
-    @GetMapping ("mergify")
-    public String getMergify() {
-        return "Mergify";
-    }
-
-    @GetMapping("/auto_mergify")
-    public String getAutoMergify() {
-        return "Auto Mergify";
-    }
+    
 }
