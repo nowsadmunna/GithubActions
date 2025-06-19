@@ -36,4 +36,9 @@ public class ToDoController {
     public void deleteTodo(@PathVariable String id) {
         todoService.delete(id);
     }
+
+    @GetMapping("/some")
+    public String getSomeTodo() {
+        return "Hello World";
+    }
 }
