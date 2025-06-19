@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="max-w-md mx-auto mt-10 p-5 border rounded shadow">
-      <h1 className="text-2xl font-bold mb-5 text-center">To-Do List</h1>
+      <h1 className="text-2xl font-bold mb-5 text-center">To-Do List Netlify</h1>
 
       <div className="flex mb-5">
         <input
