@@ -1,4 +1,4 @@
-name: Backend CI
+name: Backend CI/CD
 
 on:
   push:
@@ -43,3 +43,7 @@ jobs:
         run: mvn clean test
         env:
           SPRING_DATA_MONGODB_URI: ${{ secrets.MONGODB_URI }}
+
+      - name: Deploy to Render (CD)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
