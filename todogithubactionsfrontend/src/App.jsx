@@ -6,7 +6,7 @@ function App() {
   const [title, setTitle] = useState('');
 
   const fetchTodos = async () => {
-    const res = await axios.get('http://localhost:8091/api/todos');
+    const res = await axios.get('https://githubactions-d6yx.onrender.com/api/todos');
     setTodos(res.data);
   };
 
@@ -16,13 +16,13 @@ function App() {
 
   const addTodo = async () => {
     if (!title.trim()) return;
-    await axios.post('http://localhost:8091/api/todos', { title, completed: false });
+    await axios.post('https://githubactions-d6yx.onrender.com/api/todos', { title, completed: false });
     setTitle('');
     fetchTodos();
   };
 
   const toggleComplete = async (todo) => {
-    await axios.put(`http://localhost:8091/api/todos/${todo.id}`, {
+    await axios.put(`https://githubactions-d6yx.onrender.com/api/todos/${todo.id}`, {
       ...todo,
       completed: !todo.completed,
     });
@@ -30,7 +30,7 @@ function App() {
   };
 
   const deleteTodo = async (id) => {
-    await axios.delete(`http://localhost:8091/api/todos/${id}`);
+    await axios.delete(`https://githubactions-d6yx.onrender.com/api/todos/${id}`);
     fetchTodos();
   };
 
