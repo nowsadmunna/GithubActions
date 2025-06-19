@@ -41,4 +41,12 @@ public class ToDoController {
     public String getSomeTodo() {
         return "Hello World";
     }
+    @GetMapping("/pr_branch")
+    public String getPrBranch() {
+        return "Pr Branch";
+    }
+    @GetMapping("/auto_merge")
+    public String getAutoMerge() {
+        return "Auto Merge";
+    }
 }
